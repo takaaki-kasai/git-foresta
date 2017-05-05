@@ -46,6 +46,11 @@ All other options and arguments (except `--pretty` or `--format`) are passed dow
 Since git-foresta has no pager of is own, it is recommended to use some paging program
 via pipe with appropriate option (e.g. `git-foresta | less -RS`).
 
+## Install
+
+Copy the `git-foresta` file (at the root of this repository) to one of the place in your `$PATH`,
+and give execute permission to it.
+
 ## Tips
 
 * Example of shell configuration for zsh:
