@@ -53,6 +53,13 @@ and give execute permission to it.
 
 ## Tips
 
+* Without `--no-status` option, current working tree status is shown near HEAD.
+  Meanings of the symbols are as follows:
+  - `*`: There are unstaged changes.
+  - `+`: There are staged changes.
+  - `%`: There are untracked files.
+  - `$`: There are stashed changes.
+
 * Example of shell configuration for zsh:
   ```zsh
   function gifo() { git-foresta --style=10 $@ | less -RS }
