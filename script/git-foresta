@@ -264,7 +264,7 @@ sub get_refs
 
     my ($sha, $name) = ($ln =~ /^(\S+)\s+(.*)/s);
     $ret->{$sha} = [] unless exists $ret->{$sha};
-    
+
     push @{$ret->{$sha}}, $name;
     if ($name =~ m{^refs/tags/}) {
       my $sub_sha = $Repo->command("log", "-1",
@@ -446,7 +446,7 @@ sub vine_merge
       }
 
       die "Should not really happen" if $idx == $orig_vine;
-        
+
       if ($idx < $orig_vine) {
         my $p = $idx + 1;
 
