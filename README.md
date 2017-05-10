@@ -6,13 +6,13 @@ It is a modified version of [git-forest](http://inai.de/projects/hxtools/) (writ
 ## Samples
 
 Following image is a result of
-`git-foresta --all --style=10 | less -RS`
+`git-foresta --all --style=10 | less -RSX`
 with font [Meslo LG](https://github.com/andreberg/Meslo-Font).
 
 ![git-foresta sample 1](https://raw.githubusercontent.com/takaaki-kasai/git-foresta/assets/zzz_git-foresta-sample1.png "git-foresta sample 1")
 
 Following image is a result of
-`git-foresta --all --style=1 --graph-symbol-commit=★ --graph-symbol-tip=☆ --graph-margin-right=2 | less -RS`
+`git-foresta --all --style=1 --graph-symbol-commit=★ --graph-symbol-tip=☆ --graph-margin-right=2 | less -RSX`
 with font [Ricty Diminished](https://github.com/edihbrandon/RictyDiminished).
 
 ![git-foresta sample 2](https://raw.githubusercontent.com/takaaki-kasai/git-foresta/assets/zzz_git-foresta-sample2.png "git-foresta sample 2")
@@ -44,7 +44,7 @@ It can take additional options below.
 All other options and arguments (except `--pretty` or `--format`) are passed down to git-log. (e.g. `--all`)
 
 Since git-foresta has no pager of is own, it is recommended to use some paging program
-via pipe with appropriate option (e.g. `git-foresta | less -RS`).
+via pipe with appropriate option (e.g. `git-foresta | less -RSX`).
 
 ## Install
 
@@ -62,8 +62,8 @@ and give execute permission to it.
 
 * Example of shell configuration for zsh:
   ```zsh
-  function gifo() { git-foresta --style=10 "$@" | less -RS }
-  function gifa() { git-foresta --all --style=10 "$@" | less -RS }
+  function gifo() { git-foresta --style=10 "$@" | less -RSX }
+  function gifa() { git-foresta --all --style=10 "$@" | less -RSX }
   compdef _git gifo=git-log
   compdef _git gifa=git-log
   ```
