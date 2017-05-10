@@ -62,8 +62,8 @@ and give execute permission to it.
 
 * Example of shell configuration for zsh:
   ```zsh
-  function gifo() { git-foresta --style=10 $@ | less -RS }
-  function gifa() { git-foresta --all --style=10 $@ | less -RS }
+  function gifo() { git-foresta --style=10 "$@" | less -RS }
+  function gifa() { git-foresta --all --style=10 "$@" | less -RS }
   compdef _git gifo=git-log
   compdef _git gifa=git-log
   ```
