@@ -48,8 +48,14 @@ via pipe with appropriate option (e.g. `git-foresta | less -RSX`).
 
 ## Install
 
-Copy the `git-foresta` file (at the root of this repository) to one of the place in your `$PATH`,
+Copy the `git-foresta` file (at the root of this repository) to one of the place in your `PATH`,
 and give execute permission to it.
+
+For example, if you have `~/bin` in your `PATH`, you can install git-foresta by following one-liner:
+
+```
+curl -L https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta -o ~/bin/git-foresta && chmod +x ~/bin/git-foresta
+```
 
 ## Tips
 
