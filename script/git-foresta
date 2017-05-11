@@ -731,6 +731,13 @@ sub PRINT
   $self->{saved} .= join($\, @_);
 }
 
+sub PRINTF
+{
+  my $self = shift;
+  my $format = shift;
+  $self->{saved} .= sprintf($format, @_);
+}
+
 sub UNTIE
 {
   my $self = shift;
