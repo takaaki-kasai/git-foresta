@@ -700,7 +700,7 @@ sub vis_xfrm
   }
 
 
-  $s =~ tr/efg.rt.xyz/xyz.tr.efg/ if $Reverse_order;
+  $s =~ tr/efg.xyz/xyz.efg/ if $Reverse_order;
 
   if ($Style == 1) {
     $s =~ tr/ABD.efg.IKm.xyz/├┤─.┌┬┐.│┼─.└┴┘/;
