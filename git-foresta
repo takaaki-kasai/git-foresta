@@ -119,6 +119,8 @@ my $Graph_symbol_root     = '■';
 my $Graph_symbol_tip      = '○';
 my $Graph_symbol_tr       = trgen();
 
+$SIG{'PIPE'} = 'DEFAULT'; # avoid broken pipe error
+
 &main();
 
 sub main
