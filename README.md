@@ -40,6 +40,7 @@ It can take additional options below.
 * `--graph-symbol-overpass=<Symbol>`: Graph symbol of overpass (default: `═` ).
 * `--graph-symbol-root=<Symbol>`: Graph symbol of root (default: `■` ).
 * `--graph-symbol-tip=<Symbol>`: Graph symbol of tip (default: `○` ).
+* `--version` : Print the version number and exit.
 
 All other options and arguments (except `--pretty` or `--format`) are passed down to git-log. (e.g. `--all`)
 
