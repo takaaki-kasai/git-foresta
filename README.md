@@ -78,3 +78,6 @@ curl -L https://github.com/takaaki-kasai/git-foresta/raw/master/git-foresta -o ~
 ## License
 
 GPL-3.0, see `LICENSE`.
+
+Copyright (C) 2008 Jan Engelhardt<br />
+Copyright (C) 2017 Takaaki Kasai<br />
