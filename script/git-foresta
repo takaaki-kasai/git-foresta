@@ -18,6 +18,8 @@ use strict;
 use utf8;
 use Encode qw(encode_utf8 decode_utf8);
 use POSIX qw(strftime);
+my $Program_name  = 'git-foresta';
+my $Version       = '1.1.0';
 my $Repo          = Git->repository($ENV{"GIT_DIR"} || ".");
 my $Pretty_fmt    = "format:%H\t%at\t%an\t%C(reset)%C(auto)%d%C(reset)\t%s";
 my $Reverse_order = 0;
@@ -91,11 +93,13 @@ sub main
     "graph-symbol-overpass=s" => sub { $Graph_symbol_overpass = decode_utf8($_[1]) },
     "graph-symbol-root=s"     => sub { $Graph_symbol_root     = decode_utf8($_[1]) },
     "graph-symbol-tip=s"      => sub { $Graph_symbol_tip      = decode_utf8($_[1]) },
+    "version"                 => sub {
+      print "$Program_name version $Version\n";
+      exit;
+    },
     "help"                    => sub {
       my $help;
-      my $script_name = $0;
-      $script_name =~ s/^.*\/([^\/]+)$/$1/;
-      $help = "Usage: $script_name [options]\n";
+      $help = "Usage: $Program_name [options]\n";
       $help = $help . "      --help                              Show this help and exit.\n";
       $help = $help . "      --svdepth=<Subvine depth>           Maximum length of merge subvines (default: 2).\n";
       $help = $help . "      --no-status                         Do not show the working tree status near HEAD.\n";
@@ -111,6 +115,7 @@ sub main
       $help = $help . "      --graph-symbol-overpass=<Symbol>    Graph symbol of overpass (default: ═ ).\n";
       $help = $help . "      --graph-symbol-root=<Symbol>        Graph symbol of root (default: ■ ).\n";
       $help = $help . "      --graph-symbol-tip=<Symbol>         Graph symbol of tip (default: ○ ).\n";
+      $help = $help . "      --version                           Print the version number and exit.\n";
       $help = $help . "  All other options and arguments (except --pretty or --format) are passed down to git-log. (e.g. --all)\n";
       print encode_utf8($help);
       exit;
