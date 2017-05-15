@@ -19,7 +19,7 @@ use utf8;
 use Encode qw(encode_utf8 decode_utf8);
 use POSIX qw(strftime);
 my $Program_name  = 'git-foresta';
-my $Version       = '1.1.0';
+my $Version       = '1.1.1';
 my $Repo          = Git->repository($ENV{"GIT_DIR"} || ".");
 my $Pretty_fmt    = "format:%H\t%at\t%an\t%C(reset)%C(auto)%d%C(reset)\t%s";
 my $Reverse_order = 0;
