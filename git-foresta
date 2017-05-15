@@ -121,7 +121,7 @@ my $Graph_symbol_merge    = '◎';
 my $Graph_symbol_overpass = '═';
 my $Graph_symbol_root     = '■';
 my $Graph_symbol_tip      = '○';
-my $Graph_symbol_tr       = trgen();
+my $Graph_symbol_tr;
 
 $SIG{'PIPE'} = 'DEFAULT'; # avoid broken pipe error
 
@@ -175,6 +175,7 @@ sub main
       exit;
     },
   );
+  $Graph_symbol_tr = trgen();
   ++$Subvine_depth;
   if (substr($Pretty_fmt, 0, 7) ne "format:") {
     die "If you use --pretty, it must be in the form of --pretty=format:";
